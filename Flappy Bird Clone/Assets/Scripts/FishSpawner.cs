@@ -26,7 +26,6 @@ public class FishSpawner : MonoBehaviour
             randIndex = Random.Range(0, fishes.Length);
             Instantiate(fishes[randIndex], new Vector2(5f, randy), Quaternion.identity);
         }
-        fishes[randIndex].transform.Translate(Vector2.left * Time.deltaTime);
     }
 
     void Newpos()

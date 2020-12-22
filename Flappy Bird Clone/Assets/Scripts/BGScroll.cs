@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BGScroll : MonoBehaviour
 {
-    [SerializeField] float speed = 0.05f;
+    public float speed = 0.05f;
     Renderer rend;
 
     private void Start()
