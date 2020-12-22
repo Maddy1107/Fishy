@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CollisionChecker : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    public UnityEvent collider;
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("DEAD");
+        collider.Invoke();
+        GameController.instance.gameplay = false;
     }
 }

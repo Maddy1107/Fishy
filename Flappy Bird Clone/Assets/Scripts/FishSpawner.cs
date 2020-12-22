@@ -13,7 +13,8 @@ public class FishSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateTimer();
+        if (GameController.instance.gameplay)
+            UpdateTimer();
     }
 
     private void UpdateTimer()
